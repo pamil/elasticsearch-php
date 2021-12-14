@@ -40,10 +40,6 @@ jobs:
       run: |
         composer install --prefer-dist
 
-    - name: PHP Coding Standards
-      run: |
-        composer run-script phpcs
-
     - name: PHP Static Analysis Tool
       run: |
         composer run-script phpstan
