@@ -46,7 +46,7 @@ jobs:
 
     - name: Unit tests
       run: |
-        vendor/bin/phpunit -c phpunit.xml.dist
+        vendor/bin/phpunit -c phpunit.xml
       env:
         TEST_SUITE: free
 
@@ -64,6 +64,6 @@ jobs:
 
     - name: Integration tests
       run: |
-        vendor/bin/phpunit -c phpunit-integration-tests.xml
+        vendor/bin/phpunit -c phpunit-integration.xml
       env:
         ELASTICSEARCH_URL: http://localhost:9200
