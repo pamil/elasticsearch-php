@@ -40,9 +40,9 @@ jobs:
       run: |
         composer install --prefer-dist
 
-    - name: PHP Static Analysis Tool
-      run: |
-        composer run-script phpstan
+#    - name: PHP Static Analysis Tool
+#      run: |
+#        composer run-script phpstan
 
     - name: Unit tests
       run: |
