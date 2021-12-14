@@ -49,6 +49,7 @@ jobs:
         vendor/bin/phpunit -c phpunit.xml
       env:
         TEST_SUITE: free
+        ES_TEST_HOST: http://localhost:9200
 
     - name: Configure sysctl limits
       run: |
@@ -67,3 +68,4 @@ jobs:
         vendor/bin/phpunit -c phpunit-integration.xml
       env:
         ELASTICSEARCH_URL: http://localhost:9200
+        ES_TEST_HOST: http://localhost:9200
