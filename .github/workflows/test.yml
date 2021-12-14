@@ -40,6 +40,13 @@ jobs:
       run: |
         composer install --prefer-dist
 
+    - name: Utils
+      run: |
+        php util/RestSpecRunner.php && php util/EnsureClusterAlive.php
+      env:
+        ELASTICSEARCH_URL: http://localhost:9200
+        ES_TEST_HOST: http://localhost:9200
+
 #    - name: PHP Static Analysis Tool
 #      run: |
 #        composer run-script phpstan
